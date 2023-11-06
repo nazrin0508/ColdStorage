@@ -678,7 +678,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </div>
                                     </div>
                                 </div>
-                                <!-- END: Recent Activities -->
+                                <!-- END: Recent Activities -->hhh
                                 <!-- BEGIN: Important Notes -->
                                 <div class="col-span-12 md:col-span-6 xl:col-span-12 xl:col-start-1 xl:row-start-1 2xl:col-start-auto 2xl:row-start-auto mt-3">
                                     <div class="intro-x flex items-center h-10">
