@@ -43,10 +43,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
                             </div>
                             <div class="mt-3">
-                               <label for="colorSelect">Unit</label>
+                               <label for="itemSelect">Unit</label>
                              <div class="input-group">
-                                 <select id="colorSelect" name="colors">
-                                    <option value="red">Red</option>
+                                 <select id="itemSelect" name="item">
+                                    <option value="pcs">PCS</option>
                                     <option value="green">Green</option>
                                     <option value="blue">Blue</option>
                                  </select>
@@ -58,77 +58,56 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
                             </div>
                             <div class="mt-3">
-                            <label for="colorSelect">Select your favorite color:</label>
+                            <label for="itemsSelect">Type</label>
                              <div class="input-group">
-                                 <select id="colorSelect" name="colors">
-                                    <option value="red">Red</option>
+                                 <select id="itemsSelect" name="items">
+                                    <option value="red">D</option>
                                     <option value="green">Green</option>
                                     <option value="blue">Blue</option>
                                  </select>
                                
                             </div>
                             <div class="mt-3">
-                                <label for="crud-form-3" class="form-label">Quantity</label>
+                                <label for="crud-form-3" class="form-label">Limit</label>
                                 <div class="input-group">
                                     <input id="crud-form-3" type="text" class="form-control" placeholder="Quantity" aria-describedby="input-group-1">
-                                    <div id="input-group-1" class="input-group-text">pcs</div>
+                                  
                                 </div>
                             </div>
+                            <label for="itemsSelect">Group</label>
+                             <div class="input-group">
+                                 <select id="itemsSelect" name="items">
+                                    <option value="red">Potato</option>
+                                    <option value="green">on</option>
+                                    <option value="blue">Blue</option>
+                                 </select>
+                               
+                            </div>
                             <div class="mt-3">
-                                <label for="crud-form-4" class="form-label">Weight</label>
+                                <label for="crud-form-4" class="form-label">OP Stock</label>
                                 <div class="input-group">
                                     <input id="crud-form-4" type="text" class="form-control" placeholder="Weight" aria-describedby="input-group-2">
-                                    <div id="input-group-2" class="input-group-text">grams</div>
+                                   
                                 </div>
                             </div>
                             <div class="mt-3">
-                                <label class="form-label">Price</label>
-                                <div class="sm:grid grid-cols-3 gap-2">
-                                    <div class="input-group">
-                                        <div id="input-group-3" class="input-group-text">Unit</div>
-                                        <input type="text" class="form-control" placeholder="Unit" aria-describedby="input-group-3">
-                                    </div>
-                                    <div class="input-group mt-2 sm:mt-0">
-                                        <div id="input-group-4" class="input-group-text">Wholesale</div>
-                                        <input type="text" class="form-control" placeholder="Wholesale" aria-describedby="input-group-4">
-                                    </div>
-                                    <div class="input-group mt-2 sm:mt-0">
-                                        <div id="input-group-5" class="input-group-text">Bulk</div>
-                                        <input type="text" class="form-control" placeholder="Bulk" aria-describedby="input-group-5">
-                                    </div>
+                                <label for="crud-form-3" class="form-label">Remarks</label>
+                                <div class="input-group">
+                                    <input id="crud-form-3" type="text" class="form-control" aria-describedby="input-group-1">
+                                  
                                 </div>
                             </div>
-                            <div class="mt-3">
-                                <label>Active Status</label>
-                                <div class="form-switch mt-2">
-                                    <input type="checkbox" class="form-check-input">
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <label>Description</label>
-                                <div class="mt-2">
-                                    <div class="editor">
-                                        <p>Content of the editor.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-right mt-5">
-                                <button type="button" class="btn btn-outline-secondary w-24 mr-1">Cancel</button>
-                                <button type="button" class="btn btn-primary w-24">Save</button>
-                            </div>
-                        </div>
+                            
+
                         <!-- END: Form Layout -->
                     </div>
                 </div>
             </div>
-            <!-- END: Content -->
-        <!-- BEGIN: Dark Mode Switcher-->
-        <div data-url="side-menu-dark-crud-form.html" class="dark-mode-switcher cursor-pointer shadow-md fixed bottom-0 right-0 box border rounded-full w-40 h-12 flex items-center justify-center z-50 mb-10 mr-10">
-            <div class="mr-4 text-slate-600 dark:text-slate-200">Dark Mode</div>
-            <div class="dark-mode-switcher__toggle border"></div>
-        </div>
+           
+      
+        
 		</div>
-        <!-- END: Dark Mode Switcher-->
+      
         
         <!-- BEGIN: JS Assets-->
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
