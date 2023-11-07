@@ -43,7 +43,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
                             </div>
                             <div class="mt-3">
-                               <label for="colorSelect">Select your favorite color:</label>
+                               <label for="colorSelect">Unit</label>
                              <div class="input-group">
                                  <select id="colorSelect" name="colors">
                                     <option value="red">Red</option>
@@ -52,14 +52,20 @@ License: You must have a valid license purchased only from themeforest(the above
                                  </select>
                              </div>
                             </div>
+                            <div class="intro-y box p-5">
+                            <div>
+                                <label for="crud-form-1" class="form-label">Rate</label>
+                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                            </div>
                             <div class="mt-3">
-                                <label for="crud-form-2" class="form-label">Category</label>
-                                <select data-placeholder="Select your favorite actors" class="tom-select w-full" id="crud-form-2" multiple>
-                                    <option value="1" selected>Sport & Outdoor</option>
-                                    <option value="2">PC & Laptop</option>
-                                    <option value="3" selected>Smartphone & Tablet</option>
-                                    <option value="4">Photography</option>
-                                </select>
+                            <label for="colorSelect">Select your favorite color:</label>
+                             <div class="input-group">
+                                 <select id="colorSelect" name="colors">
+                                    <option value="red">Red</option>
+                                    <option value="green">Green</option>
+                                    <option value="blue">Blue</option>
+                                 </select>
+                               
                             </div>
                             <div class="mt-3">
                                 <label for="crud-form-3" class="form-label">Quantity</label>
