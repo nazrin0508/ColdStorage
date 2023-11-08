@@ -71,7 +71,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
                             </div>
                             <div>
-                                <label for="crud-form-1" class="form-label">Intrest</label>
+                                <label for="crud-form-1" class="form-label">Interest</label>
                                 <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
                             </div>
                             <div>
@@ -101,6 +101,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
                             </div>
                             <div class="text-right mt-5">
-                                <button type="button" class="btn btn-outline-secondary w-24 mr-1">Cancel</button>
+                                <button type="button" class="btn btn-outline-primary w-24 mr-1">Edit</button>
+
+                                <button type="button" class="btn btn-primary w-24">New</button>
                                 <button type="button" class="btn btn-primary w-24">Save</button>
+                                <button type="button" class="btn btn-primary w-24">Delete</button>
                             </div>

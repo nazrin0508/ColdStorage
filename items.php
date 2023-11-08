@@ -104,8 +104,10 @@ License: You must have a valid license purchased only from themeforest(the above
                 </div>
             </div>
             <div class="text-right mt-5">
-                                <button type="button" class="btn btn-outline-secondary w-24 mr-1">Cancel</button>
-                                <button type="button" class="btn btn-primary w-24">Save</button>
+                                 <button type="button" class="btn btn-primary w-24">Save</button>
+                                <button type="button" class="btn btn-primary w-24">New</button>
+                                <button type="button" class="btn btn-outline-primary w-24 mr-1">Edit</button>
+                                <button type="button" class="btn btn-primary w-24">Delete</button>
            </div>
            
       
