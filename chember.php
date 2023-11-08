@@ -36,12 +36,12 @@ License: You must have a valid license purchased only from themeforest(the above
 		<?php include 'sidemenu.php' ?>
             <!-- BEGIN: Content -->
             <div class="content">
-			<?php include 'topbar.php' ?>
-                <div class="intro-y flex items-center mt-8">
+			 <?php include 'topbar.php' ?>
+                  <div class="intro-y flex items-center mt-8">
                     <h2 class="text-lg font-medium mr-auto">
                        Chember/Floor
                     </h2>
-                </div>
+                 </div>
                 <div class="grid grid-cols-12 gap-6 mt-5">
                     <div class="intro-y col-span-12 lg:col-span-12">
                         <!-- BEGIN: Form Layout -->

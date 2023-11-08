@@ -31,7 +31,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<?php include 'topbar.php' ?>
                 <div class="intro-y flex items-center mt-8">
                     <h2 class="text-lg font-medium mr-auto">
-                        Form Layout
+                        Village
                     </h2>
                 </div>
                 <div class="grid grid-cols-12 gap-6 mt-5">
@@ -65,12 +65,18 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                             </div>
                             
-                            
+                            <div class="text-right mt-5">
+                                <button type="button" class="btn btn-outline-secondary w-24 mr-1">Cancel</button>
+                                <button type="button" class="btn btn-primary w-24">Save</button>
+                            </div>
                             
                         </div>
+                        
                         <!-- END: Form Layout -->
                     </div>
+                    
                 </div>
+                
             </div>
             <!-- END: Content -->
         <!-- BEGIN: Dark Mode Switcher-->

@@ -84,19 +84,23 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                             <div class="mt-3">
                             <label for="group-agent" class="form-label">Group Agent</label>
-<select id="group-agent" name="group_agent" class="form-select w-full">
-    <option value="">Select an option</option>
-    <option value="1">Party A/C</option>
-    <option value="2">xxx</option>
-    <option value="3">YYY</option>
-    <option value="4">ZZZ</option>
-</select>
-</div>
-<div>
+                                <select id="group-agent" name="group_agent" class="form-select w-full">
+                                    <option value="">Select an option</option>
+                                    <option value="1">Party A/C</option>
+                                    <option value="2">xxx</option>
+                                    <option value="3">YYY</option>
+                                    <option value="4">ZZZ</option>
+                                </select>
+                                </div>
+                                <div>
                                 <label for="crud-form-1" class="form-label">Pkt</label>
                                 <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
                             </div>
                             <div>
                                 <label for="crud-form-1" class="form-label">VoterId/Pan</label>
                                 <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                            </div>
+                            <div class="text-right mt-5">
+                                <button type="button" class="btn btn-outline-secondary w-24 mr-1">Cancel</button>
+                                <button type="button" class="btn btn-primary w-24">Save</button>
                             </div>
