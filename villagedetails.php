@@ -60,7 +60,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="mt-3">
                                 <label for="crud-form-4" class="form-label">District</label>
                                 <div class="input-group">
-                                    <input id="crud-form-4" type="text" class="form-control" placeholder="Weight" aria-describedby="input-group-2">
+                                    <input id="crud-form-4" type="text" class="form-control"  aria-describedby="input-group-2">
                               
                                 </div>
                             </div>
