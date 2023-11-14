@@ -42,28 +42,29 @@ License: You must have a valid license purchased only from themeforest(the above
                         
                         <div class="intro-y box p-5">
                             <div>
-                                <label for="crud-form-1" class="form-label">Village</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                                <label for="txt_vill" class="form-label">Village</label>
+                                <input id="txt_vill" name="txt_vill" type="text" class="form-control w-full" placeholder="Enter your Village">
                             </div>
                             <div class="mt-3">
-                                <label for="crud-form-3" class="form-label">Post</label>
-                                <div class="input-group">
-                                    <input id="crud-form-3" type="text" class="form-control" aria-describedby="input-group-1">
+                            <label for="txt_post" class="form-label">Post</label>
+                                 <div class="input-group">
+                                
+                                    <input id="txt_post" name="txt_post" type="text" class="form-control" aria-describedby="input-group-1" placeholder="Enter your Post">
                                    
                                 </div>
                             </div>
                            
                             <div class="mt-3">
-                                <label for="crud-form-3" class="form-label">Anchal</label>
+                                <label for="txt_anchal" class="form-label">Anchal</label>
                                 <div class="input-group">
-                                    <input id="crud-form-3" type="text" class="form-control"  aria-describedby="input-group-1">
+                                    <input id="txt_anchal"  name="txt_anchal"type="text" class="form-control"  aria-describedby="input-group-1" placeholder="Enter your Anchal">
                                    
                                 </div>
                             </div>
                             <div class="mt-3">
-                                <label for="crud-form-4" class="form-label">District</label>
+                                <label for="txt_dist" class="form-label">District</label>
                                 <div class="input-group">
-                                    <input id="crud-form-4" type="text" class="form-control"  aria-describedby="input-group-2">
+                                    <input id="txt_dist"  name="txt_dist"type="text" class="form-control"  aria-describedby="input-group-2" placeholder="Enter your District">
                               
                                 </div>
                             </div>

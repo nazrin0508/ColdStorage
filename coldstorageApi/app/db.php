@@ -2,7 +2,7 @@
 $server='localhost';
 $user='root';
 $pass='';
-$database='wh1';
+$database='coldstoragedb';
 
 function connect_db() {
 	$connection=new mysqli(
