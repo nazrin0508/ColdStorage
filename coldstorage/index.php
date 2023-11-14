@@ -19,7 +19,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <meta name="author" content="LEFT4CODE">
         <!--<title>Dashboard - Midone - Tailwind HTML Admin Template</title>-->
 		<title>Cold Storage</title>
-        <!-- BEGIN: CSS Assets-->
+        <!-- BEGIN: CSS Asset-->
         <link rel="stylesheet" href="dist/css/app.css" />
         <!-- END: CSS Assets-->
     </head>
