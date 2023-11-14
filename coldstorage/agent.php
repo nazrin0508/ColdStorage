@@ -41,52 +41,49 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!-- BEGIN: Form Layout -->
                         <div class="intro-y box p-5">
                             <div>
-                                <label for="crud-form-1" class="form-label">Agent Name</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                                <label for="txt_agent" class="form-label">Agent Name</label>
+                                <input id="txt_agent"  name="txt_agent"type="text" class="form-control w-full" placeholder="Enter ypur Agent name">
                             </div>
                             <div>
-                                <label for="crud-form-1" class="form-label">Sort Code</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                                <label for="txt_code" class="form-label">Sort Code</label>
+                                <input id="txt_code"  name="txt_code"type="text" class="form-control w-full" placeholder="Enter your sort code">
                             </div>
                             <div>
-                                <label for="crud-form-1" class="form-label">Village</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                                <label for="txt_village" class="form-label">Village</label>
+                                <input id="txt_village" name="txt_village" type="text" class="form-control w-full" placeholder="Enter your village">
                             </div>
                             <div>
-                                <label for="crud-form-1" class="form-label">Post</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                                <label for="txt_post" class="form-label">Post</label>
+                                <input id="txt_post" name="txt_post" type="text" class="form-control w-full" placeholder="Enter your post">
                             </div>
                             <div>
-                                <label for="crud-form-1" class="form-label">Anchal</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                                <label for="txt_anchal" class="form-label">Anchal</label>
+                                <input id="txt_anchal" name="txt_anchal" type="text" class="form-control w-full" placeholder="Enter your Anchal">
                             </div>
                             <div>
-                                <label for="crud-form-1" class="form-label">District</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                                <label for="txt_dist" class="form-label">District</label>
+                                <input id="txt_dist"  name="txt_dist"type="text" class="form-control w-full" placeholder="Enter your District">
                             </div>
                             <div>
-                                <label for="crud-form-1" class="form-label">Target</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                                <label for="txt_target" class="form-label">Target</label>
+                                <input id="txt_target"   name="txt_target" type="text" class="form-control w-full" placeholder="Enter your Target">
                             </div>
                             <div>
-                                <label for="crud-form-1" class="form-label">Limit</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                                <label for="txt_limit" class="form-label">Limit</label>
+                                <input id="txt_limit"  name="txt_limit"type="text" class="form-control w-full" placeholder="Enter your Limit">
                             </div>
                             <div>
-                                <label for="crud-form-1" class="form-label">Interest</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                                <label for="txt_interest" class="form-label">Interest</label>
+                                <input id="txt_interest"  name="txt_interest"type="text" class="form-control w-full" placeholder="Enter your Interest">
                             </div>
+                            
                             <div>
-                                <label for="crud-form-1" class="form-label">Agent Name</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
-                            </div>
-                            <div>
-                                <label for="crud-form-1" class="form-label">Commission</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                                <label for="txt_commission" class="form-label">Commission</label>
+                                <input id="txt_commission"   name="txt_commission"type="text" class="form-control w-full" placeholder="Enter your commission">
                             </div>
                             <div class="mt-3">
-                            <label for="group-agent" class="form-label">Group Agent</label>
-                                <select id="group-agent" name="group_agent" class="form-select w-full">
+                            <label for="txt-agent" class="form-label">Group Agent</label>
+                                <select id="txt-agent" name="txt_agent" class="form-select w-full">
                                     <option value="">Select an option</option>
                                     <option value="1">Party A/C</option>
                                     <option value="2">xxx</option>
@@ -95,12 +92,12 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </select>
                                 </div>
                                 <div>
-                                <label for="crud-form-1" class="form-label">Pkt</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                                <label for="txt_pxt" class="form-label">Pkt</label>
+                                <input id="txt_pxt" name="txt_pxt" type="text" class="form-control w-full" placeholder="Enter your pxt">
                             </div>
                             <div>
-                                <label for="crud-form-1" class="form-label">VoterId/Pan</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                                <label for="txt_voter" class="form-label">VoterId/Pan</label>
+                                <input id="txt_voter"  name="txt_voter"type="text" class="form-control w-full" placeholder="Enter your Voterid/pan">
                             </div>
                             <div class="text-right mt-5">
                                 <button type="button" class="btn btn-outline-primary w-24 mr-1">Edit</button>
