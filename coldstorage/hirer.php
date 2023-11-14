@@ -20,7 +20,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <title>CRUD Form - Midone - Tailwind HTML Admin Template</title>
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="dist/css/app.css" />
-        <!-- END: CSS Assets this is written by sneha -->
+        <!-- END: CSS Assets this is  -->
     </head>
     <!-- END: Head -->
     <body class="py-5">
@@ -31,7 +31,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<?php include 'topbar.php' ?>
                 <div class="intro-y flex items-center mt-8">
                     <h2 class="text-lg font-medium mr-auto">
-                    Form Layout
+                    
                     </h2>
                 </div>
                 <div class="grid grid-cols-12 gap-6 mt-5">
@@ -93,11 +93,11 @@ License: You must have a valid license purchased only from themeforest(the above
                       
             <!-- END: Content -->
         <!-- BEGIN: Dark Mode Switcher-->
-        <div data-url="side-menu-dark-crud-form.html" class="dark-mode-switcher cursor-pointer shadow-md fixed bottom-0 right-0 box border rounded-full w-40 h-12 flex items-center justify-center z-50 mb-10 mr-10">
+        <!-- <div data-url="side-menu-dark-crud-form.html" class="dark-mode-switcher cursor-pointer shadow-md fixed bottom-0 right-0 box border rounded-full w-40 h-12 flex items-center justify-center z-50 mb-10 mr-10">
             <div class="mr-4 text-slate-600 dark:text-slate-200">Dark Mode</div>
             <div class="dark-mode-switcher__toggle border"></div>
         </div>
-		</div>
+		</div> -->
         <!-- END: Dark Mode Switcher-->
         
         <!-- BEGIN: JS Assets-->
