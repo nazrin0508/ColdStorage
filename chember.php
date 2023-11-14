@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php
+require_once('db.php');
+$query='select * from chember';
+$connection=new mysqli(
+    $GLOBALS['server'],$GLOBALS['user'],
+    $GLOBALS['pass'],$GLOBALS['database']);
+$result = mysqli_query($connection, $query);
+
+
+?> 
+ 
+ <!DOCTYPE html>
 <!--
 Template Name: Midone - HTML Admin Dashboard Template
 Author: Left4code
@@ -51,16 +62,27 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <th>Ch/Fl/Ty </th>
                                     <th>Type</th>
                                     <th>Sardar</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
                                    
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>fgh</td>
-                                    <td>hbjk</td>
-                                    <td>hbjnk</td>
-                                  
-                                </tr>
+                                <?php
+                                    while($row= mysqli_fetch_assoc($result)){
+                                     ?>
+                                     <td> <?php echo $row['ch_fl_ty']?></td>
+                                     <td> <?php echo $row['type']?></td>
+                                     <td> <?php echo $row['sarder']?></td>
+                                     <td> <a href ="#" class="btn btn-primary"> Edit</a></td>
+                                     <td> <a href="#" class=" btn btn-danger">Delete</a></td>
+                                      </tr>
+                                     <?php   
+                                        }
+                                     ?>
+                                    
+                            
                             </tbody>
                         </table>
                       

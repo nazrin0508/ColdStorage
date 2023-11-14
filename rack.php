@@ -1,4 +1,17 @@
-<!DOCTYPE html>
+<?php
+require_once('db.php');
+$query='select * from rack_master';
+$connection=new mysqli(
+    $GLOBALS['server'],$GLOBALS['user'],
+    $GLOBALS['pass'],$GLOBALS['database']);
+$result = mysqli_query($connection, $query);
+
+
+?> 
+ 
+ 
+ 
+ <!DOCTYPE html>
 <!--
 Template Name: Midone - HTML Admin Dashboard Template
 Author: Left4code

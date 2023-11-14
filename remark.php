@@ -1,3 +1,12 @@
+<?php
+require_once('db.php');
+$query='select * from receiver_remark_log';
+	$connection=new mysqli(
+			$GLOBALS['server'],$GLOBALS['user'],
+			$GLOBALS['pass'],$GLOBALS['database']);
+$result = mysqli_query($connection, $query);
+
+?>
 <!DOCTYPE html>
 <!--
 Template Name: Midone - HTML Admin Dashboard Template
@@ -52,15 +61,29 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <th>Type</th>
                                     <th>Group Of Particular</th>
                                     <th>Rec No</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>fgh</td>
-                                    <td>hbjk</td>
-                                    <td>hbjnk</td>
-                                    <td>nn</td>
-                                </tr>
+                                    <?php
+                                    while($row= mysqli_fetch_assoc($result)){
+                                     ?>
+                                     <td> <?php echo $row['rem_rec_name']?></td>
+                                     <td> <?php echo $row['type']?></td>
+                                     <td> <?php echo $row['grp_particular']?></td>
+                                     <td> <?php echo $row['rec_no']?></td>
+                                     <td> <a href ="#" class="btn btn-primary"> Edit</a></td>
+                                     <td> <a href="#" class=" btn btn-danger">Delete</a></td>
+                                      </tr>
+                                     <?php   
+                                    }
+                                    
+                                    
+                                    
+                                    ?>
+                                
                             </tbody>
                         </table>
                       
