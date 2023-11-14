@@ -42,7 +42,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="intro-y box p-5">
                             <div>
                                 <label for="txt_agent" class="form-label">Agent Name</label>
-                                <input id="txt_agent"  name="txt_agent"type="text" class="form-control w-full" placeholder="Enter ypur Agent name">
+                                <input id="txt_agent"  name="txt_agent"type="text" class="form-control w-full" placeholder="Enter your Agent name">
                             </div>
                             <div>
                                 <label for="txt_code" class="form-label">Sort Code</label>
