@@ -20,7 +20,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <title>CRUD Form - Midone - Tailwind HTML Admin Template</title>
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="dist/css/app.css" />
-        <!-- END: CSS Assets this is written by sneha -->
+        <!-- END: CSS Assets this is -->
     </head>
     <!-- END: Head -->
     <body class="py-5">
