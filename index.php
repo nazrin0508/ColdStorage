@@ -625,7 +625,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
                                                     <img alt="Midone - HTML Admin Template" src="dist/images/profile-6.jpg">
                                                 </div>
-                                             </div><!--bhjhvjbhkhbkh -->
+                                             </div>
                                             <div class="box px-5 py-3 ml-4 flex-1 zoom-in">
                                                 <div class="flex items-center">
                                                     <div class="font-medium">Tom Cruise</div>
