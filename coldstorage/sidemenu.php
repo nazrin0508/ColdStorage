@@ -777,7 +777,36 @@
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="javascript:;" class="side-menu">
+                            <div class="side-menu__icon"> <i data-lucide="box"></i> </div>
+                            <div class="side-menu__title">
+                                Transaction
+                                <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                            </div>
+                        </a>
+                        <ul class="">
+                        <li>
+                                <a href="amdanisrbond.php" class="side-menu">
+                                    <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                                    <div class="side-menu__title"> Amdani SR Bond </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="deliveryslip.php.php" class="side-menu">
+                                    <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                                    <div class="side-menu__title"> Delivery Slip </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="rackingdetails.php" class="side-menu">
+                                    <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                                    <div class="side-menu__title"> Racking Details </div>
+                                </a>
+                            </li>
+                            
                     <!--<li>
+                        
                         <a href="javascript:;" class="side-menu">
                             <div class="side-menu__icon"> <i data-lucide="shopping-bag"></i> </div>
                             <div class="side-menu__title">
