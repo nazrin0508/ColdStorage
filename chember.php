@@ -19,8 +19,16 @@ License: You must have a valid license purchased only from themeforest(the above
         <meta name="author" content="LEFT4CODE">
         <title>CRUD Form - Midone - Tailwind HTML Admin Template</title>
         <!-- BEGIN: CSS Assets-->
+        <script src="dist/js/jquery.js"></script>
         <link rel="stylesheet" href="dist/css/app.css" />
+        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
         <!-- END: CSS Assets-->
+        <script>
+            $(document).ready(function(){            	
+            new DataTable('#data');
+            });
+        </script>
     </head>
     <!-- END: Head -->
     <body class="py-5">
@@ -28,57 +36,36 @@ License: You must have a valid license purchased only from themeforest(the above
 		<?php include 'sidemenu.php' ?>
             <!-- BEGIN: Content -->
             <div class="content">
-			<?php include 'topbar.php' ?>
-                <div class="intro-y flex items-center mt-8">
+			 <?php include 'topbar.php' ?>
+                  <div class="intro-y flex items-center mt-8">
                     <h2 class="text-lg font-medium mr-auto">
-                        Village
+                       Chember/Floor
                     </h2>
-                </div>
+                 </div>
                 <div class="grid grid-cols-12 gap-6 mt-5">
-                    <div class="intro-y col-span-12 lg:col-span-6">
+                    <div class="intro-y col-span-12 lg:col-span-12">
                         <!-- BEGIN: Form Layout -->
-                        <div class="intro-y box p-5">
-                            <div>
-                                <label for="crud-form-1" class="form-label">Village</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
-                            </div>
-                            <div class="mt-3">
-                                <label for="crud-form-3" class="form-label">Post</label>
-                                <div class="input-group">
-                                    <input id="crud-form-3" type="text" class="form-control" aria-describedby="input-group-1">
+                        <table  id="data"class="display table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Ch/Fl/Ty </th>
+                                    <th>Type</th>
+                                    <th>Sardar</th>
                                    
-                                </div>
-                            </div>
-                           
-                            <div class="mt-3">
-                                <label for="crud-form-3" class="form-label">Anchal</label>
-                                <div class="input-group">
-                                    <input id="crud-form-3" type="text" class="form-control"  aria-describedby="input-group-1">
-                                   
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <label for="crud-form-4" class="form-label">District</label>
-                                <div class="input-group">
-                                    <input id="crud-form-4" type="text" class="form-control"  aria-describedby="input-group-2">
-                              
-                                </div>
-                            </div>
-                            
-                            <div class="text-right mt-5">
-                               <button type="button" class="btn btn-primary w-24">Save</button>
-                               <button type="button" class="btn btn-primary w-24">New</button>
-                                <button type="button" class="btn btn-outline-secondary w-24 mr-1">Edit</button>
-                                <button type="button" class="btn btn-primary w-24">Delete</button>
-                            </div>
-                            
-                        </div>
-                        
-                        <!-- END: Form Layout -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fgh</td>
+                                    <td>hbjk</td>
+                                    <td>hbjnk</td>
+                                  
+                                </tr>
+                            </tbody>
+                        </table>
+                      
                     </div>
-                    
                 </div>
-                
             </div>
             <!-- END: Content -->
         <!-- BEGIN: Dark Mode Switcher-->
