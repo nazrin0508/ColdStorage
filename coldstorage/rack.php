@@ -58,26 +58,38 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="grid grid-cols-12 gap-6 mt-5">
                     <div class="intro-y col-span-12 lg:col-span-12">
                         <!-- BEGIN: Form Layout -->
-                        <table  id="data"class="display table-responsive">
+                        <table  id="data" class="display table-responsive">
                             <thead>
                                 <tr>
                                     <th>Chb </th>
                                     <th>Type</th>
                                     <th>From</th>
-                                    <th>TO</th>
-                                    <th>Flr</th>
+                                    <th>To</th>
+                                    <th>Flt</th>
                                     <th>Pkt</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>fgh</td>
-                                    <td>hbjk</td>
-                                    <td>hbjnk</td>
-                                    <td>nn</td>
-                                    <td>hh</td>
-                                    <td>gg</td>
+                                <?php
+                                    while($row= mysqli_fetch_assoc($result)){
+                                     ?>
+                                    <td> <?php echo $row['chb']?></td>
+                                     <td> <?php echo $row['type']?></td>
+                                     <td> <?php echo $row['from']?></td>
+                                     <td> <?php echo $row['to']?></td>
+                                     <td> <?php echo $row['flt']?></td>
+                                     <td> <?php echo $row['pkt']?></td>
+                                    <td> <a href ="#" class="btn btn-primary"> Edit</a></td>
+                                     <td> <a href="#" class=" btn btn-danger">Delete</a></td>
                                 </tr>
+                                <?php
+                                    }
+                                    ?>
+                
+                                
                             </tbody>
                         </table>
                       
