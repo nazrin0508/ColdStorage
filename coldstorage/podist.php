@@ -18,7 +18,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
         <meta name="author" content="LEFT4CODE">
         <title>CRUD Form - Midone - Tailwind HTML Admin Template</title>
-        <!-- BEGIN: CSS Assets-->
+        <!-- BEGIN: CSS Asset-->
         <link rel="stylesheet" href="dist/css/app.css" />
         <!-- END: CSS Assets-->
     </head>
