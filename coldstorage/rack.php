@@ -13,7 +13,7 @@ $result = mysqli_query($connection, $query);
  
  <!DOCTYPE html>
 <!--
-Template Name: Midone - HTML Admin Dashboard Template
+Template Name: Midone: HTML Admin Dashboard Template
 Author: Left4code
 Website: http://www.left4code.com/
 Contact: muhammadrizki@left4code.com

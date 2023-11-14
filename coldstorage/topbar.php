@@ -1,6 +1,6 @@
 <!-- BEGIN: Top Bar -->
 	<div class="top-bar">
-		<!-- BEGIN: Breadcrumb -->
+		<!-- BEGIN- Breadcrumb -->
 		<nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="#">Application</a></li>
