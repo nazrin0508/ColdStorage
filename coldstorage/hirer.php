@@ -20,7 +20,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <title>CRUD Form - Midone - Tailwind HTML Admin Template</title>
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="dist/css/app.css" />
-        <!-- END: CSS Assets this is written by sneha -->
+        <!-- END: CSS Assets this is  -->
     </head>
     <!-- END: Head -->
     <body class="py-5">
@@ -31,7 +31,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<?php include 'topbar.php' ?>
                 <div class="intro-y flex items-center mt-8">
                     <h2 class="text-lg font-medium mr-auto">
-                    Form Layout
+                    
                     </h2>
                 </div>
                 <div class="grid grid-cols-12 gap-6 mt-5">
