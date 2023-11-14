@@ -794,6 +794,12 @@
                                     <div class="side-menu__title"> Amdani/SR Bond </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="rackingdetails.php" class="side-menu">
+                                    <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                                    <div class="side-menu__title"> Racking Details </div>
+                                </a>
+                            </li>
 
 
                     <!--<li>
