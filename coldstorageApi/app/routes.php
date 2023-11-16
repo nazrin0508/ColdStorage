@@ -95,8 +95,8 @@ return function (App $app) {
 					->withStatus($status);
 	});
 	 // End REST API for purchaseInv Entity
-	 //Begin REST API for degination entity
-	$app->group("$burl/degination", function (Group $group) {
+	 //Begin REST API for village entity
+	$app->group("$burl/village", function (Group $group) {
         $group->get('', function (Request $request, Response $response, $args) {
 		try {
 			$params = $request->getQueryParams();
@@ -114,7 +114,7 @@ return function (App $app) {
 						}
 			}
 			$db=getconn();
-			$sql="select * from dsgmast";
+			$sql="select * from village";
 			if ($filter)
 				$sql.=" where $filter";
 			else $sql.=" limit 200";
@@ -130,11 +130,11 @@ return function (App $app) {
 					->withHeader('Content-Type', 'application/json')
 					->withStatus($status);
 		});
-		$group->get("/{DCODE}", function (Request $request, Response $response, $args) {
+		$group->get("/{id}", function (Request $request, Response $response, $args) {
 			try {
 				$db = getconn();
-				$stmt = $db->prepare('SELECT * FROM dsgmast WHERE DCODE = :CODE');
-				$stmt->bindValue(':CODE', $args['DCODE'], PDO::PARAM_INT);
+				$stmt = $db->prepare('SELECT * FROM village WHERE id = :id');
+				$stmt->bindValue(':id', $args['id'], PDO::PARAM_INT);
 				$stmt->execute();
 				$data = $stmt->fetch(PDO::FETCH_ASSOC);
 				$status = 200;
@@ -152,15 +152,15 @@ return function (App $app) {
 		$group->post('', function (Request $request, Response $response, $args) {
 		try {
             $users = $request->getParsedBody();
-            $sql = "INSERT INTO dsgmast(DESCR, NODAYS, DAYSPERTIME, CATGR, DISPORDER)
-            VALUES(:txt_descr, :txt_nodays, :txt_dayspertime, :txt_catgr, :txt_disporder)";
+            $sql = "INSERT INTO village( village_name, post, anchal, district)
+            VALUES(:txt_vill, :txt_post, :txt_anchal, :txt_dist)";
             $db = getconn();
             $stmt = $db->prepare($sql);
-            $stmt->bindParam(":txt_descr", $users['descr']);
-			$stmt->bindParam(":txt_nodays", $users['totalLeave']);
-			$stmt->bindParam(":txt_dayspertime", $users['leave']);
-			$stmt->bindParam(":txt_catgr", $users['catgr']);
-			$stmt->bindParam(":txt_disporder", $users['disporder']);
+            $stmt->bindParam(":txt_vill", $users['village_name']);
+			$stmt->bindParam(":txt_post", $users['post']);
+			$stmt->bindParam(":txt_anchal", $users['anchal']);
+			$stmt->bindParam(":txt_dist", $users['district']);
+			
 			$stmt->execute();
 			if ($stmt->rowCount()>0) $msg="success"; else $msg="no update";
 			$db = null;$status=201;
@@ -228,6 +228,6 @@ return function (App $app) {
         });
 
     });
-	//End of REST API for degination entity
+	//End of REST API for village entity
 	
 };
