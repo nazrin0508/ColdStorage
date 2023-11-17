@@ -804,6 +804,8 @@
                                     <div class="side-menu__title"> Racking Details </div>
                                 </a>
                             </li>
+</ul>
+</li>
                             
                     <!--<li>
                         
