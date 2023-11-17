@@ -53,9 +53,11 @@
                 <!-- BEGIN: Mobile Menu -->
         <!-- END: Mobile Menu -->
     <div class="flex mt-[4.7rem] md:mt-0">
+    <?php include 'sidemenu.php' ?>
         
         <!-- BEGIN: Content -->
         <div class="content content--top-nav">
+        <?php include 'topbar.php' ?>
             <div class="intro-y flex items-center mt-8">
                 <h2 class="text-lg font-medium mr-auto">
                     District
@@ -197,7 +199,7 @@
             "processing": true,
             "searching": true,
             "serverSide": true,
-            "ajax": "ajax_district.php",
+            "ajax": "ajax_village.php",
             "columns": [
                 { "data": "id" },
                 { "data": "village" },
