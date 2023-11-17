@@ -10,7 +10,7 @@
         <meta name="description" content="Enigma admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
         <meta name="keywords" content="admin template, Enigma Admin Template, dashboard template, flat admin template, responsive admin template, web app">
         <meta name="author" content="LEFT4CODE">
-        <title>District</title>
+        <title>Village</title>
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="dist/css/app.css" />
 		<link rel="stylesheet" href="dist/css/sweetalert2.min.css" />
@@ -60,7 +60,7 @@
         <?php include 'topbar.php' ?>
             <div class="intro-y flex items-center mt-8">
                 <h2 class="text-lg font-medium mr-auto">
-                    District
+                    Village
                 </h2>
             </div>
             <div class="grid grid-cols-12 gap-6 mt-5">
