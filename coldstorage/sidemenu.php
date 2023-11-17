@@ -728,7 +728,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="hirer.php" class="side-menu">
+                                <a href=" index_hirer.php" class="side-menu">
                                     <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
                                     <div class="side-menu__title"> Hirer</div>
                                 </a>
