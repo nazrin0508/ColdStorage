@@ -793,7 +793,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="deliveryslip.php.php" class="side-menu">
+                                <a href="deliveryslip.php." class="side-menu">
                                     <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
                                     <div class="side-menu__title"> Delivery Slip </div>
                                 </a>
