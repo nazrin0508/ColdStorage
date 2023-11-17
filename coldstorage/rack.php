@@ -73,6 +73,8 @@ License: You must have a valid license purchased only from themeforest(the above
                             </thead>
                             <tbody>
                                 <tr>
+                                z
+                
                                 <?php
                                     while($row= mysqli_fetch_assoc($result)){
                                      ?>

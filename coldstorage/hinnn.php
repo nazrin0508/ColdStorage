@@ -56,7 +56,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                             <div class="mt-3">
                                 <label for="crud-form-2" class="form-label">Phone No</label>
-                                <input id="crud-form-1" type="number" class="form-control w-full" placeholder="Input text">
+                                <input id="crud-form-1" type="number" class="form-control w-full" >
                                 
                             </div>
                             
