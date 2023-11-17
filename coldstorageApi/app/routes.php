@@ -12,7 +12,7 @@ require_once 'db.php';
 
 
 return function (App $app) {
-	$burl='/dmartapi'; //Define base directory
+	$burl='/ColdStorage/coldstorageApi'; //Define base directory
     $app->options("$burl/{routes:.*}", function (Request $request, Response $response) {
         // CORS Pre-Flight OPTIONS Request Handler
         return $response;
@@ -32,6 +32,143 @@ return function (App $app) {
         return $response;
     });
 
+//Begin REST API for village entity
+$app->group("$burl/village", function (Group $group) {
+	$group->get('', function (Request $request, Response $response, $args) {
+	try {
+		$params = $request->getQueryParams();
+		$filter='';
+		foreach($params as $p=>$v) {
+			if ($v)
+				switch($p)
+					{
+					case 'id';
+						$filter.="$p='$v'";break;	
+					default;
+						if ($filter) $filter.=" and ";
+						$filter.="$p like '%$v%'";
+						break;
+					}
+		}
+		$db=getconn();
+		$sql="select * from village";
+		if ($filter)
+			$sql.=" where $filter";
+		else $sql.=" limit 200";
+		$result=$db->query($sql);
+		$data=$result->fetchAll(PDO::FETCH_ASSOC);
+		$status=200;
+		} catch(Exception $e) {
+			$data[]=array("errmsg"=>$e->getMessage());$status=400;
+		}
+		$payload = json_encode($data);
+		$response->getBody()->write($payload);
+		return $response
+				->withHeader('Content-Type', 'application/json')
+				->withStatus($status); 
+	});
+	$group->get("/{id}", function (Request $request, Response $response, $args) {
+		try {
+			$db = getconn();
+			$stmt = $db->prepare('SELECT * FROM village WHERE id = :id');
+			$stmt->bindValue(':id', $args['id'], PDO::PARAM_INT);
+			$stmt->execute();
+			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$status = 200;
+		} catch (Exception $e) {
+			$data = array("errmsg" => $e->getMessage());
+			$status = 400;
+		}
+	
+		$response->getBody()->write(json_encode($data));
+		return $response
+			->withHeader('Content-Type', 'application/json')
+			->withStatus($status);
+	});			
+	
+	$group->post('', function (Request $request, Response $response, $args) {
+	try {
+		//$body = $request->getBody();
+		$users = $request->getParsedBody();
+
+		$sql = "INSERT INTO village(villageName, post, anchal, district) 
+		VALUES(:txt_village_name, :txt_post, :txt_anchal, :txt_district)";
+		$db = getconn();
+		$stmt = $db->prepare($sql);
+		$stmt->bindParam(":txt_village_name", $users['village_name']);
+		$stmt->bindParam(":txt_post", $users['post']);
+		$stmt->bindParam(":txt_anchal", $users['anchal']);
+		$stmt->bindParam(":txt_district", $users['district']);
+		$stmt->execute();
+
+		if ($stmt->rowCount()>0) $msg="success"; else $msg="no update";
+		$db = null;$status=201;
+
+		//$data=array("item"=>$users);
+		$data = array("status"=>"Ok","msg"=>"Inserted sucessfully","item"=>$users);
+	} catch(Exception $e) {
+		$data=array("status"=>"Error","msg"=>$e->getMessage());$status=200;
+	}
+	$response->getBody()->write(json_encode($data));
+		return $response
+				->withHeader('Content-Type', 'application/json')
+				->withStatus($status); 
+	});
+	
+	$group->put('/{id}', function (Request $request, Response $response, $args) {
+	try {
+		
+		$body = $request->getBody();
+		$db = getconn();
+		$users = $request->getParsedBody();
+		$sql = "UPDATE village SET villageName=:village_name, post=:post, anchal=:anchal, district=:district WHERE id=:id";	
+		$stmt = $db->prepare($sql);	
+		$stmt->bindParam(":id", $users['village_id']);
+
+		$stmt->bindParam(":village_name", $users['village_name']);
+		$stmt->bindParam(":post", $users['post']);
+		$stmt->bindParam(":anchal", $users['anchal']);
+		$stmt->bindParam(":district", $users['district']);
+		$stmt->execute();
+		if ($stmt->rowCount()>0) $msg="success"; else $msg="no update";
+		$db = null;$status=201;$data=null;
+		$data = array("status"=>"Ok","msg"=>$msg,"item"=>$users);
+	} catch(Exception $e) {
+		$data=array("status"=>"Error","msg"=>$e->getMessage(),"item"=>$sql);$status=200;
+	}
+	$response->getBody()->write(json_encode($data));
+		return $response
+				->withHeader('Content-Type', 'application/json')
+				->withStatus($status); 
+	});
+			
+	$group->delete('/{id}', function (Request $request, Response $response, $args) {
+		try {
+			$sql = "DELETE FROM village WHERE id = :id";
+			$db = getconn();
+			$stmt = $db->prepare($sql);
+			$stmt->bindParam(":id", $args['id']);
+			$stmt->execute();
+	
+			$rowCount = $stmt->rowCount();
+			$msg = ($rowCount > 0) ? "Deleted successfully" : "No deletion";
+			
+			$db = null;
+			$status = 201;
+			$data = array("status" => "Ok", "msg" => $msg);
+		} catch (Exception $e) {
+			$data = array("status" => "Error", "msg" => $e->getMessage());
+			$status = 200;
+		}
+	
+		$response->getBody()->write(json_encode($data));
+		return $response
+			->withHeader('Content-Type', 'application/json')
+			->withStatus($status);
+	});
+	
+});
+//End of REST API for village entity
 
 	// Begin REST API for purchaseInv Entity
 	$app->post("$burl/purinv", function (Request $request, Response $response) {
@@ -95,139 +232,6 @@ return function (App $app) {
 					->withStatus($status);
 	});
 	 // End REST API for purchaseInv Entity
-	 //Begin REST API for village entity
-	$app->group("$burl/village", function (Group $group) {
-        $group->get('', function (Request $request, Response $response, $args) {
-		try {
-			$params = $request->getQueryParams();
-			$filter='';
-			foreach($params as $p=>$v) {
-				if ($v)
-					switch($p)
-						{
-						case 'id';
-							$filter.="$p='$v'";break;
-						default;
-							if ($filter) $filter.=" and ";
-							$filter.="$p like '%$v%'";
-							break;
-						}
-			}
-			$db=getconn();
-			$sql="select * from village";
-			if ($filter)
-				$sql.=" where $filter";
-			else $sql.=" limit 200";
-			$result=$db->query($sql);
-			$data=$result->fetchAll(PDO::FETCH_ASSOC);
-			$status=200;
-			} catch(Exception $e) {
-				$data[]=array("errmsg"=>$e->getMessage());$status=400;
-			}
-			$payload = json_encode($data);
-			$response->getBody()->write($payload);
-			return $response
-					->withHeader('Content-Type', 'application/json')
-					->withStatus($status);
-		});
-		$group->get("/{id}", function (Request $request, Response $response, $args) {
-			try {
-				$db = getconn();
-				$stmt = $db->prepare('SELECT * FROM village WHERE id = :id');
-				$stmt->bindValue(':id', $args['id'], PDO::PARAM_INT);
-				$stmt->execute();
-				$data = $stmt->fetch(PDO::FETCH_ASSOC);
-				$status = 200;
-			} catch (Exception $e) {
-				$data = array("errmsg" => $e->getMessage());
-				$status = 400;
-			}
 
-			$response->getBody()->write(json_encode($data));
-			return $response
-				->withHeader('Content-Type', 'application/json')
-				->withStatus($status);
-		});
-
-		$group->post('', function (Request $request, Response $response, $args) {
-		try {
-            $users = $request->getParsedBody();
-            $sql = "INSERT INTO village( village_name, post, anchal, district)
-            VALUES(:txt_vill, :txt_post, :txt_anchal, :txt_dist)";
-            $db = getconn();
-            $stmt = $db->prepare($sql);
-            $stmt->bindParam(":txt_vill", $users['village_name']);
-			$stmt->bindParam(":txt_post", $users['post']);
-			$stmt->bindParam(":txt_anchal", $users['anchal']);
-			$stmt->bindParam(":txt_dist", $users['district']);
-			
-			$stmt->execute();
-			if ($stmt->rowCount()>0) $msg="success"; else $msg="no update";
-			$db = null;$status=201;
-			//$data=array("item"=>$users);
-			$data = array("status"=>"Ok","msg"=>"Inserted sucessfully","item"=>$users);
-		} catch(Exception $e) {
-			$data=array("status"=>"Error","msg"=>$e->getMessage());$status=200;
-		}
-		$response->getBody()->write(json_encode($data));
-			return $response
-					->withHeader('Content-Type', 'application/json')
-					->withStatus($status);
-		});
-
-		$group->put('/{DCODE}', function (Request $request, Response $response, $args) {
-		try {
-
-			$body = $request->getBody();
-			$db = getconn();
-			$users = $request->getParsedBody();
-			$sql = "UPDATE dsgmast SET DESCR=:txt_descr, NODAYS=:txt_nodays, DAYSPERTIME=:txt_dayspertime, CATGR=:txt_catgr, DISPORDER=:txt_disporder WHERE DCODE=:txt_dcode";
-			$stmt = $db->prepare($sql);
-			$stmt->bindParam(":txt_dcode", $users['dcode']);
-			$stmt->bindParam(":txt_descr", $users['descr']);
-			$stmt->bindParam(":txt_nodays", $users['totalLeave']);
-			$stmt->bindParam(":txt_dayspertime", $users['leave']);
-			$stmt->bindParam(":txt_catgr", $users['catgr']);
-			$stmt->bindParam(":txt_disporder", $users['disporder']);
-			$stmt->execute();
-			if ($stmt->rowCount()>0) $msg="success"; else $msg="no update";
-			$db = null;$status=201;$data=null;
-			$data = array("status"=>"Ok","msg"=>$msg,"item"=>$users);
-		} catch(Exception $e) {
-			$data=array("status"=>"Error","msg"=>$e->getMessage(),"item"=>$sql);$status=200;
-		}
-		$response->getBody()->write(json_encode($data));
-			return $response
-					->withHeader('Content-Type', 'application/json')
-					->withStatus($status);
-		});
-
-		$group->delete('/{DCODE}', function (Request $request, Response $response, $args) {
-            try {
-                $sql = "DELETE FROM dsgmast WHERE DCODE = :CODE";
-                $db = getconn();
-                $stmt = $db->prepare($sql);
-                $stmt->bindParam(":CODE", $args['DCODE']);
-                $stmt->execute();
-
-                $rowCount = $stmt->rowCount();
-                $msg = ($rowCount > 0) ? "Deleted successfully" : "No deletion";
-
-                $db = null;
-                $status = 201;
-                $data = array("status" => "Ok", "msg" => $msg);
-            } catch (Exception $e) {
-                $data = array("status" => "Error", "msg" => $e->getMessage());
-                $status = 200;
-            }
-
-            $response->getBody()->write(json_encode($data));
-            return $response
-                ->withHeader('Content-Type', 'application/json')
-                ->withStatus($status);
-        });
-
-    });
-	//End of REST API for village entity
 	
 };
