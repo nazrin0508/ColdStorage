@@ -734,7 +734,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="villagedetails.php" class="side-menu">
+                                <a href="index_village.php" class="side-menu">
                                     <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
                                     <div class="side-menu__title"> Village Details </div>
                                 </a>
@@ -804,6 +804,8 @@
                                     <div class="side-menu__title"> Racking Details </div>
                                 </a>
                             </li>
+</ul>
+</li>
                             
                     <!--<li>
                         

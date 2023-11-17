@@ -11,6 +11,7 @@ function connect_db() {
 	return $connection;
 }
 
+
 function getconn() {
 	$server=$GLOBALS['server'];
 	$user=$GLOBALS['user'];
@@ -21,4 +22,6 @@ function getconn() {
 	return $conn;
 }
 
+
 ?>
+
