@@ -31,52 +31,53 @@ License: You must have a valid license purchased only from themeforest(the above
 			<?php include 'topbar.php' ?>
                 <div class="intro-y flex items-center mt-8">
                     <h2 class="text-lg font-medium mr-auto">
-                        Form Layout
+                        item
                     </h2>
                 </div>
                 <div class="grid grid-cols-12 gap-6 mt-5">
-                    <div class="intro-y col-span-12 lg:col-span-6">
+                    <div class="intro-y col-span-12 lg:col-span-12">
                         <!-- BEGIN: Form Layout -->
                         <div class="intro-y box p-5">
                             <div>
-                                <label for="crud-form-1" class="form-label">Itm Name</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                                <label for="txt_item" class="form-label">Itm Name</label>
+                                <input id="txt_item" name="txt_item" type="text" class="form-control w-full" placeholder="Input text">
                             </div>
                             <div class="mt-3">
-                               <label for="itemSelect">Unit</label>
-                             <div class="input-group">
-                                 <select id="itemSelect" name="item">
-                                    <option value="pcs">PCS</option>
-                                    <option value="green">Green</option>
-                                    <option value="blue">Blue</option>
-                                 </select>
-                             </div>
-                            </div>
+                            <label for="txt-unit" class="form-label">Unit</label>
+                                <select id="txt-agent" name="txt_agent" class="form-select w-full">
+                                    <option value="">Select an option</option>
+                                    <option value="1">PCS</option>
+                                    <option value="2">xxx</option>
+                                    <option value="3">YYY</option>
+                                    <option value="4">ZZZ</option>
+                                </select>
+                                </div>
+                           
                             <div class="intro-y box p-5">
                             <div>
-                                <label for="crud-form-1" class="form-label">Rate</label>
-                                <input id="crud-form-1" type="text" class="form-control w-full" placeholder="Input text">
+                                <label for="txt_rate" class="form-label">Rate</label>
+                                <input id="txt_rate"    name="txt_rate"type="text" class="form-control w-full" placeholder="Input text">
                             </div>
                             <div class="mt-3">
-                            <label for="itemsSelect">Type</label>
-                             <div class="input-group">
-                                 <select id="itemsSelect" name="items">
-                                    <option value="red">D</option>
-                                    <option value="green">Green</option>
-                                    <option value="blue">Blue</option>
-                                 </select>
-                               
-                            </div>
+                            <label for="txt-agent" class="form-label">Type</label>
+                                <select id="txt-agent" name="txt_agent" class="form-select w-full">
+                                    <option value="">Select an option</option>
+                                    <option value="1">D</option>
+                                    <option value="2">xxx</option>
+                                    <option value="3">YYY</option>
+                                    <option value="4">ZZZ</option>
+                                </select>
+                                </div>
                             <div class="mt-3">
-                                <label for="crud-form-3" class="form-label">Limit</label>
+                                <label for="txt_limit" class="form-label">Limit</label>
                                 <div class="input-group">
-                                    <input id="crud-form-3" type="text" class="form-control" placeholder="Quantity" aria-describedby="input-group-1">
+                                    <input id="txt_limit"  name="txt_limit"type="text" class="form-control" placeholder="Quantity" aria-describedby="input-group-1">
                                   
                                 </div>
                             </div>
                             <label for="itemsSelect">Group</label>
                              <div class="input-group">
-                                 <select id="itemsSelect" name="items">
+                                 <select id="itemsSelect" name="itemsSelect">
                                     <option value="red">Potato</option>
                                     <option value="green">on</option>
                                     <option value="blue">Blue</option>
@@ -84,16 +85,16 @@ License: You must have a valid license purchased only from themeforest(the above
                                
                             </div>
                             <div class="mt-3">
-                                <label for="crud-form-4" class="form-label">OP Stock</label>
+                                <label for="txt_op" class="form-label">OP Stock</label>
                                 <div class="input-group">
-                                    <input id="crud-form-4" type="text" class="form-control" placeholder="Weight" aria-describedby="input-group-2">
+                                    <input id="txt_op" name="txt_op" type="text" class="form-control" placeholder="Weight" aria-describedby="input-group-2">
                                    
                                 </div>
                             </div>
                             <div class="mt-3">
-                                <label for="crud-form-3" class="form-label">Remarks</label>
+                                <label for="txt_remarks" class="form-label">Remarks</label>
                                 <div class="input-group">
-                                    <input id="crud-form-3" type="text" class="form-control" aria-describedby="input-group-1">
+                                    <input id="txt_remarks"name="txt_remarks" type="text" class="form-control" aria-describedby="input-group-1">
                                   
                                 </div>
                             </div>
@@ -102,13 +103,13 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!-- END: Form Layout -->
                     </div>
                 </div>
-            </div>
-            <div class="text-right mt-5">
+                <div class="text-right mt-5">
                                  <button type="button" class="btn btn-primary w-24">Save</button>
                                 <button type="button" class="btn btn-primary w-24">New</button>
                                 <button type="button" class="btn btn-outline-primary w-24 mr-1">Edit</button>
                                 <button type="button" class="btn btn-primary w-24">Delete</button>
            </div>
+            </div>
            
       
         

@@ -2,7 +2,7 @@
         <!--<div class="mobile-menu md:hidden">
             <div class="mobile-menu-bar">
                 <a href="" class="flex mr-auto">
-                    <img alt="Midone - HTML Admin Template" class="w-6" src="dist/images/logo.svg">
+                    <img alt="Midone - HTML Template" class="w-6" src="dist/images/logo.svg">
                 </a>
                 <a href="javascript:;" class="mobile-menu-toggler"> <i data-lucide="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
             </div>
@@ -734,7 +734,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="villagedetails.php" class="side-menu">
+                                <a href="index_village.php" class="side-menu">
                                     <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
                                     <div class="side-menu__title"> Village Details </div>
                                 </a>

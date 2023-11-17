@@ -9,7 +9,7 @@ $result = mysqli_query($connection, $query);
 ?>
 <!DOCTYPE html>
 <!--
-Template Name: Midone - HTML Admin Dashboard Template
+Template Name: Midone:HTML Admin Dashboard Template
 Author: Left4code
 Website: http://www.left4code.com/
 Contact: muhammadrizki@left4code.com
@@ -92,11 +92,11 @@ License: You must have a valid license purchased only from themeforest(the above
             </div>
             <!-- END: Content -->
         <!-- BEGIN: Dark Mode Switcher-->
-        <div data-url="side-menu-dark-crud-form.html" class="dark-mode-switcher cursor-pointer shadow-md fixed bottom-0 right-0 box border rounded-full w-40 h-12 flex items-center justify-center z-50 mb-10 mr-10">
+        <!-- <div data-url="side-menu-dark-crud-form.html" class="dark-mode-switcher cursor-pointer shadow-md fixed bottom-0 right-0 box border rounded-full w-40 h-12 flex items-center justify-center z-50 mb-10 mr-10">
             <div class="mr-4 text-slate-600 dark:text-slate-200">Dark Mode</div>
             <div class="dark-mode-switcher__toggle border"></div>
         </div>
-		</div>
+		</div> -->
         <!-- END: Dark Mode Switcher-->
         
         <!-- BEGIN: JS Assets-->
